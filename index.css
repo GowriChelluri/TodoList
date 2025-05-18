@@ -1,0 +1,63 @@
+.todo-image{
+    height:40px;
+    width:40px
+}
+.top-container{
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+.task-text{
+    border-left:0px;
+    border-right:0px;
+    border-top:0px;
+    border-bottom:1px solid black
+    
+}
+.add-task{
+    border:2px solid grey;
+    height:40%;
+    width:40%;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.todo-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.add-task-btn{
+    background-color:blue;
+    height:30px;
+    width:90px;
+    border:0px;
+    color:white;
+    border-radius:8px;
+    padding:8px;
+    margin-top:10px
+
+}
+.filter-container{
+    display: flex;
+    
+}
+.status-filter{
+    display: flex;
+    flex-direction: column;
+    margin-right:50px
+}
+.priority-filter{
+    display: flex;
+    flex-direction: column;
+}
+.task-card{
+    border:1px solid grey;
+    margin-top:20px;
+    width:40vw;
+    height:200px;
+    padding:20px
+}
