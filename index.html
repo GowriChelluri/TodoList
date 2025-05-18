@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TodoList</title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <div class="todo-list-container">
-    <div class="top-container">
-        <img src="https://www.shutterstock.com/image-vector/blue-tick-icon-vector-symbol-600nw-1478661581.jpg" class="todo-image"/>
-        <h1>Todo List</h1>
-    </div>
 
-    
-    <div class="add-task">
-      <p class="task-title">Task Title</p>
-      <input type="text" id="taskTitle" placeholder="Enter task title" class="task-text"/>
-      <p>Priority</p>
-      <select id="taskPriority">
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-      </select>
-      <p>Deadline</p>
-      <input type="date" id="taskDeadline"/>
-      <button id="addTaskButton" class="add-task-btn">Add Task</button>
-    </div>
-    <div class="filter-container">
-        <div class="status-filter">
-            <p>Status</p>
-            <select >
-                <option>Completed</option>
-                <option>Pending</option>
-            </select>
-        </div>
-        <div class="priority-filter">
-            <p>Priority</p>
-            <select>
-                <option>High</option>
-                <option>Low</option>
-            </select>
-        </div>
-    </div>
-    
-    <div id="taskList" class="task-list"></div>
-    
-    
+  <h1>Todo List</h1>
+
+  <div id="controls">
+    <input type="text" id="taskTitle" placeholder="Task Title" />
+    <select id="taskPriority">
+      <option value="High">High</option>
+      <option value="Medium" selected>Medium</option>
+      <option value="Low">Low</option>
+    </select>
+    <input type="date" id="taskDeadline" />
+    <button id="addTaskButton">Add Task</button>
   </div>
+
+  <div id="filters">
+    <label for="filterStatus">Status:</label>
+    <select id="filterStatus">
+      <option value="all">All</option>
+      <option value="completed">Completed</option>
+      <option value="pending" selected>Pending</option>
+    </select>
+
+    <label for="filterPriority">Priority:</label>
+    <select id="filterPriority">
+      <option value="all" selected>All</option>
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+
+    <label for="sortOption">Sort By:</label>
+    <select id="sortOption">
+      <option value="default" selected>Default</option>
+      <option value="deadline">Deadline</option>
+      <option value="priority">Priority</option>
+    </select>
+
+    <button id="themeToggle">Toggle Theme</button>
+  </div>
+
+  <div id="taskList"></div>
 
   <script src="index.js"></script>
 </body>
